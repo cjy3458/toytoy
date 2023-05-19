@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백엔드와 함께하는 토이프로젝트</title>
+  </head>
+  <body>
+    <h1>방명록</h1>
+    <form id="guestbookForm">
+      <label for="writer">작성자:</label>
+      <input type="text" id="writer" name="writer" required />
+      <br />
+      <label for="content">그대를 위한 편지:</label>
+      <textarea id="content" name="content" required></textarea>
+      <br />
+      <button type="submit">작성하기</button>
+    </form>
+    <button onClick="getGuestbookList()">조회하기</button>
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
+
+<!--
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백엔드와 함께하는 토이프로젝트</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <h1>방명록</h1>
+    <form id="guestbookForm">
+      <label for="writer">작성자:</label>
+      <input type="text" id="writer" name="writer" required />
+      <br />
+      <label for="content">그대를 위한 편지:</label>
+      <textarea id="content" name="content" required></textarea>
+      <br />
+      <button type="submit">작성하기</button>
+      <button onclick="getGuestbookList()">조회하기</button>
+      <!— <button onclick="renderGuestbook()">보여주기</button> —>
+      <script src="./main.js"></script>
+    </form>
+  </body>
+</html>
+
+-->
