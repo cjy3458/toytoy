@@ -2,7 +2,7 @@ const baseUrl = "http://toyproject.kro.kr:8000/guestbook/";
 
 const getGuestbookList = () => {
   const guestbookContainer = document.getElementById("guestbookContainer");
-  guestbookContainer.innerHTML = ""; // 기존의 방명록 리스트 초기화
+  guestbookContainer.innerHTML = "";
 
   axios
     .get(baseUrl)
@@ -14,12 +14,13 @@ const getGuestbookList = () => {
       data.forEach((datas) => {
         const list = document.createElement("div");
         list.id = datas.id;
+        list.classList.add("guestbook-item");
 
         const writer = document.createElement("p");
-        writer.textContent = `작성자: ${datas.writer}`;
+        writer.textContent = `이름❤️: ${datas.writer}`;
 
         const content = document.createElement("p");
-        content.textContent = `내용: ${datas.content}`;
+        content.textContent = `편지💌: ${datas.content}`;
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "삭제하기";

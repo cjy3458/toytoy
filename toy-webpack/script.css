@@ -1,44 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
-  /* background-color: #ffe8ad; */
-  /* width: 400px;
-  height: 400px; */
-  background-color: #fc0;
-  background-image: linear-gradient(
-      45deg,
-      #964b00 25%,
-      transparent 25%,
-      transparent 50%,
-      #964b00 50%,
-      #964b00
-    ),
-    linear-gradient(
-      45deg,
-      #964b00 25%,
-      transparent 25%,
-      transparent 50%,
-      #964b00 50%,
-      #964b00
-    );
-  background-position: 0 0, 20px 20px;
-  background-size: 40px 40px;
+  font-family: "Single Day", cursive;
+  font-size: 18px;
+  background-image: url("./꿀벌.png");
+  background-size: auto 100%;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
-  text-align: center;
   color: rgb(80, 28, 28);
+  text-align: center;
+  font-size: 30px;
 }
 
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: white;
+  border: 5px solid rgb(255, 208, 1);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* opacity: 0.9; */
 }
 
 label {
+  font-size: 20px;
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
@@ -47,51 +38,57 @@ label {
 
 input[type="text"],
 textarea {
-  width: 100%;
+  width: 96%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
+  margin-bottom: 10px;
 }
 
 button[type="submit"],
 button {
-  display: block;
   width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #333;
-  color: #fff;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 4px;
+  color: white;
+  border-radius: 6px;
+  text-align: center;
+  transition: top 0.01s linear;
+  text-shadow: 0 1px 0 #f6cd66;
+  margin-top: 3%;
+  font-family: "Delicious Handrawn";
+  font-size: 25px;
+  background-color: #f6cd66;
+  box-shadow: 0 0 0 1px #f6cd66 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 8px 0 0 #f6cd66, 0 8px 0 1px #f6cd66, 0 8px 8px 1px #f6cd66;
+}
+button[type="submit"]:active,
+button:active {
+  box-shadow: 0 0 0 1px #f6cd66 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset,
+    0 0 0 1px #f6cd66;
 }
 
 button[type="submit"]:hover,
 button:hover {
-  background-color: #555;
+  background-color: #f6cd66;
 }
 
 #guestbookContainer {
   margin-top: 20px;
 }
 
-.guestbook-item {
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin-bottom: 10px;
+#guestbookContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.guestbook-item p {
-  margin-bottom: 5px;
-}
-
-.guestbook-item button {
-  background-color: #cc0000;
-}
-
-.guestbook-item button:hover {
-  background-color: #ff0000;
+.guestbook-item {
+  /* border: 3px solid rgb(255, 208, 1); */
 }

@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="./script.css" />
   </head>
   <body>
-    <h1>방명록</h1>
     <form id="guestbookForm">
-      <label for="writer">작성자:</label>
+      <h1>방명록</h1>
+      <label for="writer">작성자🐝:</label>
       <input type="text" id="writer" name="writer" required />
       <br />
-      <label for="content">그대를 위한 편지:</label>
+      <label for="content">편지💌:</label>
       <textarea id="content" name="content" required></textarea>
       <br />
       <button type="submit">작성하기</button>
       <button onclick="getGuestbookList()">조회하기</button>
       <!-- <button onclick="deleteAll()">전체삭제</button> -->
-      <div id="guestbookContainer"></div>
       <script src="./script.js"></script>
     </form>
+    <br />
+    <div id="guestbookContainer"></div>
   </body>
 </html>
