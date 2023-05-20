@@ -5,8 +5,6 @@ body {
   font-size: 18px;
   background-image: url("./꿀벌.png");
   background-size: auto 100%;
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
   width: 100vw;
   height: 100vh;
 }
@@ -87,8 +85,4 @@ button:hover {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.guestbook-item {
-  /* border: 3px solid rgb(255, 208, 1); */
 }
