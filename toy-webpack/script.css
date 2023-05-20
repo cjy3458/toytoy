@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #ffe8ad; */
+  /* width: 400px;
+  height: 400px; */
+  background-color: #fc0;
+  background-image: linear-gradient(
+      45deg,
+      #964b00 25%,
+      transparent 25%,
+      transparent 50%,
+      #964b00 50%,
+      #964b00
+    ),
+    linear-gradient(
+      45deg,
+      #964b00 25%,
+      transparent 25%,
+      transparent 50%,
+      #964b00 50%,
+      #964b00
+    );
+  background-position: 0 0, 20px 20px;
+  background-size: 40px 40px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(80, 28, 28);
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+button[type="submit"],
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button:hover {
+  background-color: #555;
+}
+
+#guestbookContainer {
+  margin-top: 20px;
+}
+
+.guestbook-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guestbook-item p {
+  margin-bottom: 5px;
+}
+
+.guestbook-item button {
+  background-color: #cc0000;
+}
+
+.guestbook-item button:hover {
+  background-color: #ff0000;
+}
