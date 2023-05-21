@@ -11,7 +11,7 @@ const getGuestbookList = () => {
 
       const data = response.data.data; // 받아온 정보 안에 data 안에 data에 배열로 입력한 값들이 저장!
 
-      data.forEach((datas) => {
+      data.reverse().forEach((datas) => {
         const list = document.createElement("div");
         list.id = datas.visit_id;
         list.classList.add("guestbook-item");
@@ -61,6 +61,7 @@ guestbookForm.addEventListener("submit", (event) => {
       console.log("방명록 작성 성공:", response.data);
       writerInput.value = "";
       contentInput.value = "";
+      getGuestbookList();
     })
     .catch((error) => {
       console.log("방명록 작성 오류:", error);
@@ -71,20 +72,24 @@ guestbookForm.addEventListener("submit", (event) => {
 
 //현재는 delete요청을 했을 때 조회 함수를 콜하는데 요청 성공하면 remove element를 하는 것으로 바꿔야해
 const deleteGuestbook = (id) => {
-  axios
-    .delete(`${baseUrl}${id}`, {
-      data: {},
-    })
-    .then((response) => {
-      console.log("방명록 삭제 성공:", response.data);
-      const listElement = document.getElementById(id);
-      if (listElement) {
-        listElement.remove();
-      }
-      alert("삭제가 완료되었습니다");
-      getGuestbookList();
-    })
-    .catch((error) => {
-      console.log("방명록 삭제 오류:", error);
-    });
+  const confirmation = confirm("😭삭제할거에요...?😭");
+
+  if (confirmation) {
+    axios
+      .delete(`${baseUrl}${id}`, {
+        data: {},
+      })
+      .then((response) => {
+        console.log("방명록 삭제 성공:", response.data);
+        const listElement = document.getElementById(id);
+        if (listElement) {
+          listElement.remove();
+        }
+        alert("삭제완료ㅠㅠ");
+        getGuestbookList();
+      })
+      .catch((error) => {
+        console.log("방명록 삭제 오류:", error);
+      });
+  }
 };
