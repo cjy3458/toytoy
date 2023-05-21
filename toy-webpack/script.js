@@ -9,7 +9,7 @@ const getGuestbookList = () => {
     .then((response) => {
       console.log("방명록 리스트 조회 성공:", response.data);
 
-      const data = response.data.data;
+      const data = response.data.data; // 받아온 정보 안에 data 안에 data에 배열로 입력한 값들이 저장!
 
       data.forEach((datas) => {
         const list = document.createElement("div");
