@@ -81,6 +81,7 @@ const deleteGuestbook = (id) => {
       if (listElement) {
         listElement.remove();
       }
+      alert("삭제가 완료되었습니다");
       getGuestbookList();
     })
     .catch((error) => {

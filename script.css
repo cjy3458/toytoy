@@ -4,7 +4,7 @@ body {
   font-family: "Single Day", cursive;
   font-size: 18px;
   background-image: url("./꿀벌.png");
-  background-size: auto 100%;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
 }
