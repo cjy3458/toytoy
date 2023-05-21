@@ -82,7 +82,22 @@ button:hover {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* border: 5px solid rgb(255, 208, 1); */
+}
+
+.guestbook-item {
+  background-color: white;
+  border: 5px solid rgb(255, 208, 1);
+}
+
+p {
+  font-size: 20px;
+  padding-left: 5%;
+}
+
+.delBtn {
+  font-size: 20px;
 }

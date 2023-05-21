@@ -1,4 +1,4 @@
-const baseUrl = "http://toyproject.kro.kr:8000/guestbook/";
+const baseUrl = "http://ll11th-toy-project.p-e.kr:8000/";
 
 const getGuestbookList = () => {
   const guestbookContainer = document.getElementById("guestbookContainer");
@@ -9,11 +9,11 @@ const getGuestbookList = () => {
     .then((response) => {
       console.log("방명록 리스트 조회 성공:", response.data);
 
-      const data = response.data.result;
+      const data = response.data.data;
 
       data.forEach((datas) => {
         const list = document.createElement("div");
-        list.id = datas.id;
+        list.id = datas.visit_id;
         list.classList.add("guestbook-item");
 
         const writer = document.createElement("p");
@@ -23,9 +23,10 @@ const getGuestbookList = () => {
         content.textContent = `편지💌: ${datas.content}`;
 
         const deleteButton = document.createElement("button");
+        deleteButton.classList.add("delBtn");
         deleteButton.textContent = "삭제하기";
         deleteButton.addEventListener("click", () => {
-          deleteGuestbook(datas.id);
+          deleteGuestbook(datas.visit_id);
         });
 
         list.appendChild(writer);
@@ -33,6 +34,7 @@ const getGuestbookList = () => {
         list.appendChild(deleteButton);
 
         guestbookContainer.appendChild(list);
+        guestbookContainer.appendChild(document.createElement("br"));
       });
     })
     .catch((error) => {
